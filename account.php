@@ -32,7 +32,7 @@ include_once 'dbConnection.php';
   <div class="header">
     <div class="row">
       <div class="col-lg-6">
-        <span class="logo">QuizletQuizLet : EQuiz</span>
+        <span class="logo">QuizLet : EQuiz</span>
       </div>
       <div class="col-md-4 col-md-offset-2">
         <?php
@@ -284,7 +284,7 @@ var countdownTimer = setInterval('secondPassed()', 1000);
               <img src="image/dev.jpeg" width=100 height=100 alt="TEAM HexARRAYS" class="img-rounded">
             </div>
             <div class="col-md-5">
-              <a href="http://yugeshverma.blogspot.in" style="color:#A8D1FD; font-family:'typo' ; font-size:18px"
+              <a href="https://cityji.github.io/portfolio/" style="color:#A8D1FD; font-family:'typo' ; font-size:18px"
                 title="Find on Facebook">HexARRAYS</a>
               <h4 style="color:#A8D1FD; font-family:'typo' ;font-size:16px" class="title1">+91 6263823386</h4>
               <h4 style="font-family:'typo' ">meghanatamrakar@gmail.com</h4>

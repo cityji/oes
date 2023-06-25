@@ -16,9 +16,11 @@ if ($count == 1) {
         session_unset();
     }
     $_SESSION["name"] = 'Admin';
-    $_SESSION["key"] = 'sunny7785068889';
+    $_SESSION["key"] = 'QuizLetADMIN';
     $_SESSION["email"] = $email;
     header("location:dash.php?q=0");
 } else
     header("location:$ref?w=Warning : Access denied");
+// stripslashes() function removes backslashes added by the addslashes() function. prevents the user from submitting malicious data to the script.
+// if the user enters "I'm here", the addslashes() function will return "I\'m here". */
 ?>
