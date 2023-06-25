@@ -20,7 +20,7 @@
   }
   ?>
   <script>
-    function validateForm() {
+    function validateForm() { 
       var y = document.forms["form"]["name"].value; var letters = /^[A-Za-z]+$/; if (y == null || y == "") { alert("Name must be filled out."); return false; }
       var z = document.forms["form"]["college"].value; if (z == null || z == "") { alert("college must be filled out."); return false; } var x = document.forms["form"]["email"].value;
       var atpos = x.indexOf("@");
@@ -29,24 +29,74 @@
       var b = document.forms["form"]["cpassword"].value; if (a != b) { alert("Passwords must match."); return false; }
     }
   </script>
+  <style>
+    /* 
+    * {
+    outline: 1px solid red;
+    } 
+    */
+    /* help determine body level outlines */
+body{
+  overflow:hidden;
+}
+@media screen and (max-width:560px){
+    #hamburger{
+      display: flex;
+      height:100%;
+      max-width: 100%;
+      overflow: hidden;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
+    .part-container {
+      margin: 1rem;
+      display: flex;
+      width: 100%;
+      max-width: 99vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(1.5rem    );
+    }
+
+    .part-1,
+    .part-2 {
+      flex :2;
+      justify-content: center;
+      max-width: 650px;
+    }
+
+    .part-2{    
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  @media screen and (max-width:700px){
+    .part-container{
+      flex-direction: column;
+    }
+  }
+  </style>
 
 </head>
 
 <body>
-  <div class="header">
+  <div class="header" id="hamburger">
     <div class="row">
       <div style="margin: 0px 3rem;">
         <span class="logo pull-left">QuizLet : EQuiz</span>
-        . <div class="pull-right">
+        <div class="pull-right">
 
-          <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span
-              class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span
-              class="title1"><b>Login</b></span>
+          <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+            <span class="title1"><b>Login</b></span>
           </a>
-          <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#SignupModel"><span
-              class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span
-              class="title1"><b>Sign-up</b></span>
+          <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#SignupModel">
+              <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+              <span class="title1"><b>Sign-up</b></span>
           </a>
         </div>
 
@@ -56,8 +106,9 @@
         <div class="modal-dialog">
           <div class="modal-content title1">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                  aria-hidden="true">&times;</span></button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
               <h4 class="modal-title title1"><span style="color:#0c3966">Login with your existing ID</span></h4>
             </div>
             <div class="modal-body mt-9">
@@ -79,11 +130,10 @@
                         class="form-control input-md" type="password">
                     </div>
                   </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Log in</button>
-              </fieldset>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </fieldset>
               </form>
             </div>
 
@@ -198,9 +248,9 @@
   </div>
 
   <!-- starting actual vmin body with 80% of minimum viewport height -->
-  <div class="bg1 container-fluid" style="min-height:80vmin">
-    <div class="row">
-      <div class="col">
+  <div class="bg1" style="min-height:80vmin; padding-left:1rem">
+    <div class="part-container">
+      <div class="part-1">
         <h1 class="mt-5">Welcome to QuizLet!</h1>
         <p class="lead">We're so glad you're here. This is a website that provides a variety of quizzes to help you
           test your abilities and learn new concepts.</p>
@@ -212,9 +262,9 @@
         <p>We hope you enjoy your time on our website. Please feel free to contact us if you have any questions or
           suggestions.</p>
       </div>
-      <div class="col">
+      <div class="part-2">
         <!-- card of quiz start -->
-        <div class="col-sm-4">
+        <div class="col-lg-5 pull-left">
           <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
             <div class="card-body">
               <h3 class="card-title text-danger">C++ Coding</h3>
@@ -227,6 +277,29 @@
           </div>
         </div>
         <!-- card of quiz end -->
+        <div class="col-lg-5 pull-left">
+          <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
+            <div class="card-body">
+              <h3 class="card-title text-danger">Quiz on Linux</h3>
+              <p class="card-text text-primary">If you are already familiar with Linux, you may test your knowledge by taking a quiz.This quiz cover a
+                wide range of topics.   
+              </p>
+              <a href="./account.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+                Guest</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 pull-left">
+          <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
+            <div class="card-body">
+              <h3 class="card-title text-danger">PHP</h3>
+              <p class="card-text text-primary">Test your knowledge of PHP syntax, functions, and libraries. This can be helpful if you are new to PHP.
+              </p>
+              <a href="./account.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+                Guest</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div><!--container end-->
