@@ -263,7 +263,9 @@ body{
           suggestions.</p>
       </div>
       <div class="part-2">
+        <!-- demo quiz section -->
         <!-- card of quiz start -->
+
         <div class="col-lg-5 pull-left">
           <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
             <div class="card-body">
@@ -271,7 +273,7 @@ body{
               <p class="card-text text-primary">Test your knowledge about different aspects of C++. This quiz cover a
                 wide range of topics, from basic syntax to advanced concepts
               </p>
-              <a href="./account.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
@@ -284,7 +286,7 @@ body{
               <p class="card-text text-primary">If you are already familiar with Linux, you may test your knowledge by taking a quiz.This quiz cover a
                 wide range of topics.   
               </p>
-              <a href="./account.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
@@ -295,7 +297,7 @@ body{
               <h3 class="card-title text-danger">PHP</h3>
               <p class="card-text text-primary">Test your knowledge of PHP syntax, functions, and libraries. This can be helpful if you are new to PHP.
               </p>
-              <a href="./account.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
