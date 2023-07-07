@@ -81,6 +81,48 @@
         flex-direction: column;
       }
     }
+
+    .part-1{
+      background-color: #8facca63;
+      backdrop-filter: blur(1rem);
+      padding:.5rem;
+      border-radius: 1rem;
+    }
+  </style>
+  <!-- style for dynamic video background -->
+  
+  <style>
+    .video-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding:0px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  /* color: #dc0000; */
+  padding: 10px;
+}
+.bg-alt{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #fff;
+    /* text-align: center;  */
+}
   </style>
 
 </head>
@@ -250,8 +292,12 @@
   </div>
 
   <!-- starting actual vmin body with 80% of minimum viewport height -->
-  <div class="bg1" style="min-height:80vmin; padding-left:1rem">
-    <div class="part-container">
+  <div class="bg-alt video-container" style="min-height:80vmin; padding-left:1rem">
+    <video autoplay muted loop id="myVideo">
+      <source src="./dynamic-assets/thinkBG.mp4"
+        type="video/mp4" />
+    </video>
+    <div class="part-container caption" style="backdrop-filter: blur(5px);">
       <div class="part-1">
         <h1 class="mt-5">Welcome to QuizLet!</h1>
         <p class="lead">We're so glad you're here. This is a website that provides a variety of quizzes to help you
@@ -398,5 +444,9 @@
 
 
 </body>
+<script>
+  let vid = document.getElementById("myVideo");
+vid.playbackRate = 0.5; 
+</script>
 
 </html>
