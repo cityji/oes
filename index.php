@@ -14,13 +14,13 @@
   <script src="js/jquery.js" type="text/javascript"></script>
 
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> -->
   <?php if (@$_GET['w']) {
     echo '<script>alert("' . @$_GET['w'] . '");</script>';
   }
   ?>
   <script>
-    function validateForm() { 
+    function validateForm() {
       var y = document.forms["form"]["name"].value; var letters = /^[A-Za-z]+$/; if (y == null || y == "") { alert("Name must be filled out."); return false; }
       var z = document.forms["form"]["college"].value; if (z == null || z == "") { alert("college must be filled out."); return false; } var x = document.forms["form"]["email"].value;
       var atpos = x.indexOf("@");
@@ -36,20 +36,21 @@
     } 
     */
     /* help determine body level outlines */
-body{
-  overflow:hidden;
-}
-@media screen and (max-width:560px){
-    #hamburger{
-      display: flex;
-      height:100%;
-      max-width: 100%;
+    body {
       overflow: hidden;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
     }
-  }
+
+    @media screen and (max-width:560px) {
+      #hamburger {
+        display: flex;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
     .part-container {
       margin: 1rem;
@@ -59,26 +60,27 @@ body{
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      backdrop-filter: blur(1.5rem    );
+      backdrop-filter: blur(1.5rem);
     }
 
     .part-1,
     .part-2 {
-      flex :2;
+      flex: 2;
       justify-content: center;
       max-width: 650px;
     }
 
-    .part-2{    
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-  @media screen and (max-width:700px){
-    .part-container{
-      flex-direction: column;
+    .part-2 {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
     }
-  }
+
+    @media screen and (max-width:700px) {
+      .part-container {
+        flex-direction: column;
+      }
+    }
   </style>
 
 </head>
@@ -95,8 +97,8 @@ body{
             <span class="title1"><b>Login</b></span>
           </a>
           <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#SignupModel">
-              <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
-              <span class="title1"><b>Sign-up</b></span>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+            <span class="title1"><b>Sign-up</b></span>
           </a>
         </div>
 
@@ -273,7 +275,7 @@ body{
               <p class="card-text text-primary">Test your knowledge about different aspects of C++. This quiz cover a
                 wide range of topics, from basic syntax to advanced concepts
               </p>
-              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
@@ -283,10 +285,11 @@ body{
           <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
             <div class="card-body">
               <h3 class="card-title text-danger">Quiz on Linux</h3>
-              <p class="card-text text-primary">If you are already familiar with Linux, you may test your knowledge by taking a quiz.This quiz cover a
-                wide range of topics.   
+              <p class="card-text text-primary">If you are already familiar with Linux, you may test your knowledge by
+                taking a quiz.This quiz cover a
+                wide range of topics.
               </p>
-              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
@@ -295,9 +298,10 @@ body{
           <div class="card text-black bg-info" style="padding:1.5rem; margin:1rem; border-radius:1rem">
             <div class="card-body">
               <h3 class="card-title text-danger">PHP</h3>
-              <p class="card-text text-primary">Test your knowledge of PHP syntax, functions, and libraries. This can be helpful if you are new to PHP.
+              <p class="card-text text-primary">Test your knowledge of PHP syntax, functions, and libraries. This can be
+                helpful if you are new to PHP.
               </p>
-              <a href="./guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
+              <a href="guest.php?q=quiz&step=2&eid=5589222f16b93&n=1&t=2" class="btn btn-primary">Take Quiz As
                 Guest</a>
             </div>
           </div>
@@ -309,7 +313,7 @@ body{
   <!--Footer start-->
   <div class="row footer">
     <div class="col-md-3 box">
-      <a href="http://www.projectworlds/online-examination" target="_blank">About us</a>
+      <a href="./about.php" target="_blank">About us</a>
     </div>
     <div class="col-md-3 box">
       <a href="#" data-toggle="modal" data-target="#login">Admin Login</a>
@@ -327,25 +331,29 @@ body{
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
-              class="sr-only">Close</span></button>
+              class="sr-only">Close</span>
+          </button>
           <h4 class="modal-title" style="font-family:'typo' "><span style="color:#0c3966">Developers</span></h4>
+          <a href="./about.php" class="label label-primary pull-left" style="font-size:3rem;"
+              title="Team Name : ">sQUAD
+          </a>
         </div>
 
         <div class="modal-body">
-          <p>
           <div class="row">
-            <div class="col-md-4">
-              <img src="image/dev.jpeg" width=100 height=100 alt="TEAM HexARRAYS" class="img-rounded">
-            </div>
-            <div class="col-md-5">
-              <a href="https://cityji.github.io/portfolio/" style="color:#A8D1FD; font-family:'typo' ; font-size:18px"
-                title="Find on Facebook">HexARRAYS</a>
-              <h4 style="color:#A8D1FD; font-family:'typo' ;font-size:16px" class="title1">+91 6263823386</h4>
-              <h4 style="font-family:'typo' ">meghanatamrakar@gmail.com</h4>
-              <h4 style="font-family:'typo' ">APS UNIVERSITY</h4>
+            <div class="col">
+              <p class="lead" style="font-family:'typo';width: 90%;margin: 3rem auto;text-align: justify;">
+                <img src="image/dev.jpeg"alt="TEAM sQUAD" style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem; margin-left: 0px;" class="img-rounded pull-left">
+              
+                sQUAD is a energetic group of four people devoted to learning and sharing their knowledge
+                through hands-on involvement in projects. Their excitement drives them to handle challenges and
+                make inventive arrangements utilizing their mastery. <br><br>
+                With focus on building web projects, sQUAD points
+                to provide unique and effective answers to real-world issues. Their collaborative approach and
+                commitment to consistent development make them a dynamic force within the field of web improvement. 
+              </p>
             </div>
           </div>
-          </p>
         </div>
 
       </div><!-- /.modal-content -->

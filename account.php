@@ -255,7 +255,7 @@ var countdownTimer = setInterval('secondPassed()', 1000);
   <!--Footer start-->
   <div class="row footer">
     <div class="col-md-3 box">
-      <a href="http://www.projectworlds.in/online-examination" target="_blank">About us</a>
+      <a href="./about.php" target="_blank">About us</a>
     </div>
     <div class="col-md-3 box">
       <a href="#" data-toggle="modal" data-target="#login">Admin Login</a>
@@ -267,31 +267,33 @@ var countdownTimer = setInterval('secondPassed()', 1000);
       <a href="feedback.php" target="_blank">Feedback</a>
     </div>
   </div>
-  <!-- Modal For Developers-->
-  <div class="modal fade title1" id="developers">
+ <!-- Modal For Developers-->
+ <div class="modal fade title1" id="developers">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
               class="sr-only">Close</span></button>
           <h4 class="modal-title" style="font-family:'typo' "><span style="color:#0c3966">Developers</span></h4>
+          <a href="./about.php" class="label label-primary pull-left" style="font-size:3rem;"
+              title="Team Name : ">sQUAD</a>
         </div>
 
         <div class="modal-body">
-          <p>
           <div class="row">
-            <div class="col-md-4">
-              <img src="image/dev.jpeg" width=100 height=100 alt="TEAM HexARRAYS" class="img-rounded">
-            </div>
-            <div class="col-md-5">
-              <a href="https://cityji.github.io/portfolio/" style="color:#A8D1FD; font-family:'typo' ; font-size:18px"
-                title="Find on Facebook">HexARRAYS</a>
-              <h4 style="color:#A8D1FD; font-family:'typo' ;font-size:16px" class="title1">+91 6263823386</h4>
-              <h4 style="font-family:'typo' ">meghanatamrakar@gmail.com</h4>
-              <h4 style="font-family:'typo' ">APS UNIVERSITY</h4>
+            <div class="col">
+              <p class="lead" style="font-family:'typo';width: 90%;margin: 3rem auto;text-align: justify;">
+                <img src="image/dev.jpeg"alt="TEAM sQUAD" style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem;" class="img-rounded pull-left">
+              
+                sQUAD is a energetic group of four people devoted to learning and sharing their knowledge
+                through hands-on involvement in projects. Their excitement drives them to handle challenges and
+                make inventive arrangements utilizing their mastery. <br><br>
+                With focus on building web projects, sQUAD points
+                to provide unique and effective answers to real-world issues. Their collaborative approach and
+                commitment to consistent development make them a dynamic force within the field of web improvement. 
+              </p>
             </div>
           </div>
-          </p>
         </div>
 
       </div><!-- /.modal-content -->
