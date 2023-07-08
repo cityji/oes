@@ -267,8 +267,8 @@ var countdownTimer = setInterval('secondPassed()', 1000);
       <a href="feedback.php" target="_blank">Feedback</a>
     </div>
   </div>
- <!-- Modal For Developers-->
- <div class="modal fade title1" id="developers">
+  <!-- Modal For Developers-->
+  <div class="modal fade title1" id="developers">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -276,15 +276,16 @@ var countdownTimer = setInterval('secondPassed()', 1000);
               class="sr-only">Close</span></button>
           <h4 class="modal-title" style="font-family:'typo' "><span style="color:#0c3966">Developers</span></h4>
           <a href="./about.php" class="label label-primary pull-left" style="font-size:3rem;"
-              title="Team Name : ">sQUAD</a>
+            title="Team Name : ">sQUAD</a>
         </div>
 
         <div class="modal-body">
           <div class="row">
             <div class="col">
               <p class="lead" style="font-family:'typo';width: 90%;margin: 3rem auto;text-align: justify;">
-                <img src="image/dev.jpeg"alt="TEAM sQUAD" style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem;" class="img-rounded pull-left">
-              
+                <img src="image/dev.jpeg" alt="TEAM sQUAD"
+                  style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem;" class="img-rounded pull-left">
+
                 sQUAD is a energetic group of four people devoted to learning and sharing their knowledge
                 through hands-on involvement in projects. Their excitement drives them to handle challenges and
                 make inventive arrangements utilizing their mastery. <br><br>

@@ -17,8 +17,8 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> -->
   <?php if (@$_GET['w']) {
     echo '<script>alert("' . @$_GET['w'] . '");</script>';
-  }
-  ?>
+}
+?>
   <script>
     function validateForm() {
       var y = document.forms["form"]["name"].value; var letters = /^[A-Za-z]+$/; if (y == null || y == "") { alert("Name must be filled out."); return false; }
@@ -30,10 +30,10 @@
     }
   </script>
   <style>
-    /* 
+    /*
     * {
     outline: 1px solid red;
-    } 
+    }
     */
     /* help determine body level outlines */
     body {
@@ -53,7 +53,7 @@
     }
 
     .part-container {
-      margin: 1rem;
+      /* margin: 1rem; */
       display: flex;
       width: 100%;
       max-width: 99vw;
@@ -82,47 +82,48 @@
       }
     }
 
-    .part-1{
-      background-color: #8facca63;
+    .part-1 {
+      background-color: #795454ad;
       backdrop-filter: blur(1rem);
-      padding:.5rem;
+      padding: 2.5rem;
       border-radius: 1rem;
     }
   </style>
   <!-- style for dynamic video background -->
-  
+
   <style>
     .video-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    padding:0px;
-}
+      height: 100%;
+      width: 100%;
+      position: relative;
+      padding: 0px;
+    }
 
-.video-container video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-  z-index: 0;
-}
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      z-index: 0;
+    }
 
-/* Just styling the content of the div, the *magic* in the previous rules */
-.video-container .caption {
-  z-index: 1;
-  position: relative;
-  text-align: center;
-  /* color: #dc0000; */
-  padding: 10px;
-}
-.bg-alt{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    color: #fff;
-    /* text-align: center;  */
-}
+    /* Just styling the content of the div, the *magic* in the previous rules */
+    .video-container .caption {
+      z-index: 1;
+      position: relative;
+      text-align: center;
+      /* color: #dc0000; */
+      padding: 10px;
+    }
+
+    .bg-alt {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      color: #fff;
+      /* text-align: center;  */
+    }
   </style>
 
 </head>
@@ -271,8 +272,8 @@
                     </div>
                   </div>
                   <?php if (@$_GET['q7']) {
-                    echo '<p style="color:red;font-size:15px;">' . @$_GET['q7'];
-                  } ?>
+    echo '<p style="color:red;font-size:15px;">' . @$_GET['q7'];
+}?>
                   <!-- Button -->
                   <div class="form-group">
                     <label class="col-md-12 control-label" for=""></label>
@@ -292,10 +293,9 @@
   </div>
 
   <!-- starting actual vmin body with 80% of minimum viewport height -->
-  <div class="bg-alt video-container" style="min-height:80vmin; padding-left:1rem">
+  <div class="bg-alt video-container" style="min-height:80vmin;">
     <video autoplay muted loop id="myVideo">
-      <source src="./dynamic-assets/thinkBG.mp4"
-        type="video/mp4" />
+      <source src="./dynamic-assets/thinkBG.mp4" type="video/mp4" />
     </video>
     <div class="part-container caption" style="backdrop-filter: blur(5px);">
       <div class="part-1">
@@ -380,8 +380,7 @@
               class="sr-only">Close</span>
           </button>
           <h4 class="modal-title" style="font-family:'typo' "><span style="color:#0c3966">Developers</span></h4>
-          <a href="./about.php" class="label label-primary pull-left" style="font-size:3rem;"
-              title="Team Name : ">sQUAD
+          <a href="./about.php" class="label label-primary pull-left" style="font-size:3rem;" title="Team Name : ">sQUAD
           </a>
         </div>
 
@@ -389,14 +388,16 @@
           <div class="row">
             <div class="col">
               <p class="lead" style="font-family:'typo';width: 90%;margin: 3rem auto;text-align: justify;">
-                <img src="image/dev.jpeg"alt="TEAM sQUAD" style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem; margin-left: 0px;" class="img-rounded pull-left">
-              
+                <img src="image/dev.jpeg" alt="TEAM sQUAD"
+                  style="max-width: 17rem;height: 18rem;margin-left: 0px;margin:1.5rem; margin-left: 0px;"
+                  class="img-rounded pull-left">
+
                 sQUAD is a energetic group of four people devoted to learning and sharing their knowledge
                 through hands-on involvement in projects. Their excitement drives them to handle challenges and
                 make inventive arrangements utilizing their mastery. <br><br>
                 With focus on building web projects, sQUAD points
                 to provide unique and effective answers to real-world issues. Their collaborative approach and
-                commitment to consistent development make them a dynamic force within the field of web improvement. 
+                commitment to consistent development make them a dynamic force within the field of web improvement.
               </p>
             </div>
           </div>
@@ -446,7 +447,7 @@
 </body>
 <script>
   let vid = document.getElementById("myVideo");
-vid.playbackRate = 0.5; 
+  vid.playbackRate = 0.5;
 </script>
 
 </html>

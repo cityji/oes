@@ -5,17 +5,16 @@ if (isset($_SESSION["email"])) {
 }
 
 session_start();
-$name="Guest";
-$email="user@user.com";
+$name = "Guest";
+$email = "user@user.com";
 $_SESSION["name"] = $name;
 $_SESSION["email"] = $email;
 // get current url of header modify it and redirect to the appropriate page 
+
+
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-// echo $url;
-$modify= substr($url,31);
-$url='location:account.php?'.$modify;
-// echo '<BR> '.$modify;
-header($url);
+echo $url . '<br>';
+header(str_replace(strtok($url, '?'), 'location:account.php', $url));
 
 ?>
 
@@ -30,4 +29,4 @@ header($url);
 // }
 // header("Refresh: 5; url=index.php");
 // header("location:account.php?q=1");
- ?>
+?>
