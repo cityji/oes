@@ -14,10 +14,39 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <!--alert message-->
+    
+    
+    <style>
+           body {
+        position: relative;
+        /* Set the parent container to relative positioning */
+        min-height: 100vh !important;
+        /* Ensure the parent container takes up at least the full viewport height */
+        padding-bottom: 60px;
+        /* Provide some space at the bottom for the footer */
+        color: black;
+        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        /* text-align: center; */
+        /* img size is 50x50 */
+        background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 !important;
+        --webkit-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Safari 4+ */
+        -moz-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Fx 5+ */
+        -o-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Opera 12+ */
+        animation: bg-scrolling-reverse 0.92s infinite;
+        /* IE 10+ */
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    </style>
     <?php if (@$_GET['w']) {
     echo '<script>alert("' . @$_GET['w'] . '");</script>';
-  }
-  ?>
+    }
+    ?>
     <!--alert message end-->
 
 </head>

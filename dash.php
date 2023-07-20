@@ -1,10 +1,10 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+// Purpose: Dashboard for admin to manage the quiz
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
     <title>Quizlet || DASHBOARD </title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -15,7 +15,33 @@
 
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-
+    <style>
+       body {
+        position: relative;
+        /* Set the parent container to relative positioning */
+        min-height: 100vh !important;
+        /* Ensure the parent container takes up at least the full viewport height */
+        padding-bottom: 60px;
+        /* Provide some space at the bottom for the footer */
+        color: black;
+        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        /* text-align: center; */
+        /* img size is 50x50 */
+        background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 !important;
+        --webkit-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Safari 4+ */
+        -moz-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Fx 5+ */
+        -o-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Opera 12+ */
+        animation: bg-scrolling-reverse 0.92s infinite;
+        /* IE 10+ */
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    </style>
     <script>
     $(function() {
         $(document).on('scroll', function() {
@@ -32,7 +58,7 @@
     </script>
 </head>
 
-<body style="background:#eee;">
+<body>
     <div class="header">
         <div class="row">
             <div class="col-lg-6">

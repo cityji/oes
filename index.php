@@ -37,7 +37,37 @@
     */
     /* help determine body level outlines */
     body {
-      overflow: hidden;
+        position: relative;
+        /* Set the parent container to relative positioning */
+        min-height: 100vh !important;
+        /* Ensure the parent container takes up at least the full viewport height */
+        /* padding-bottom: 20px; */
+        /* Provide some space at the bottom for the footer */
+        color: black;
+        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        /* text-align: center; */
+        /* img size is 50x50 */
+        background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 !important;
+        --webkit-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Safari 4+ */
+        -moz-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Fx 5+ */
+        -o-animation: bg-scrolling-reverse 0.92s infinite;
+        /* Opera 12+ */
+        animation: bg-scrolling-reverse 0.92s infinite;
+        /* IE 10+ */
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        animation-timing-function: linear;
+        overflow-y: scroll !important;
+    }
+    .footer{
+      z-index: 2;
+      position: relative;
+      bottom: 0;
+      width: 100vw;
+      margin:0px !important;
     }
 
     @media screen and (max-width:560px) {
@@ -73,7 +103,7 @@
     .part-2 {
       display: flex;
       flex-wrap: wrap;
-      overflow: hidden;
+      overflow: hidden; 
     }
 
     @media screen and (max-width:700px) {
@@ -132,7 +162,7 @@
   <div class="header" id="hamburger">
     <div class="row">
       <div style="margin: 0px 3rem;">
-        <span class="logo pull-left">QuizLet : EQuiz</span>
+        <span class="logo pull-left" style="margin:0px;">QuizLet : EQuiz</span>
         <div class="pull-right">
 
           <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal">
@@ -446,8 +476,8 @@
 
 </body>
 <script>
-  let vid = document.getElementById("myVideo");
-  vid.playbackRate = 0.5;
+  // let vid = document.getElementById("myVideo");
+  // vid.playbackRate = 0.5;
 </script>
 
 </html>

@@ -4,6 +4,12 @@
     --dark: #0e1010;
     --trans: all 0.3s ease-in-out;
 }
+body{
+    position: relative; /* Set the parent container to relative positioning */
+    min-height: 100vh; /* Ensure the parent container takes up at least the full viewport height */
+    padding-bottom: 60px; /* Provide some space at the bottom for the footer */
+  }
+
 .navbar{
     position: fixed;
     top: 0;
