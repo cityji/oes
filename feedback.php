@@ -17,12 +17,12 @@
     
     
     <style>
-           body {
+          body {
         position: relative;
         /* Set the parent container to relative positioning */
         min-height: 100vh !important;
         /* Ensure the parent container takes up at least the full viewport height */
-        padding-bottom: 60px;
+        /* padding-bottom: 20px; */
         /* Provide some space at the bottom for the footer */
         color: black;
         font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
@@ -41,7 +41,52 @@
         -moz-animation-timing-function: linear;
         -o-animation-timing-function: linear;
         animation-timing-function: linear;
+        overflow-y: scroll !important;
+        color: black
     }
+    .footer{
+      z-index: 2;
+      position: relative;
+      bottom: 0;
+      width: 100vw;
+      margin:0px !important;
+    }
+    *{
+        text-align: justify;
+        font-size:1rem!important;
+    }
+    .SM{
+      font-size:1rem!important;
+    }
+    .M{
+      font-size:1.5rem!important;
+    }
+    .L{
+    }
+    .XL{
+      font-size:2.5rem!important;
+    }
+    .XXL{
+      font-size:3rem!important;
+    }
+    .input-group{
+      padding:5px;
+      border-radius: 5px;
+    }
+    .blur{
+      height:100%;
+      margin-top:2rem;
+      border-radius: 0.5rem;
+      width: auto;
+border: 1px solid gainsboro;
+background: white;
+backdrop-filter: blur(2.5px);
+    }
+
+    .panel > div:nth-child(2) > div:nth-child(1){
+        padding:3rem;
+    }
+
     </style>
     <?php if (@$_GET['w']) {
     echo '<script>alert("' . @$_GET['w'] . '");</script>';
@@ -56,7 +101,7 @@
     <!--header start-->
     <div class="row header">
         <div class="col-lg-6">
-            <span class="logo">QuizLet : EQuiz</span>
+            <span class="logo" style="font-size: 2rem !important;">QuizLet : EQuiz</span>
         </div>
         <div class="col-md-2">
         </div>
@@ -120,6 +165,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    
     <!--sign in modal closed-->
 
     <!--header end-->
@@ -127,50 +173,54 @@
     <div class="bg1">
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6 panel" style="background-image:url(image/bg1.jpg); min-height:430px;">
-                <h2 align="center" style="font-family:'typo'; color:#000066">FEEDBACK/REPORT A PROBLEM</h2>
-                <div style="font-size:14px">
+            <div class="col-md-6 panel" style="color:black; min-height:430px;">
+                <h2 class="XXL" style="font-family:'typo'; text-align:center;color:#000066">FEEDBACK / REPORT A BUG</h2>
+                <div>
                     <?php if (@$_GET['q'])
-            echo '<span style="font-size:18px;"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;' . @$_GET['q'] . '</span>';
+            echo '<span"><span class="L glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;' . @$_GET['q'] . '</span>';
           else {
             echo ' 
-You can send us your feedback through e-mail on the following e-mail id:<br />
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-10">
-<a href="mailto:chiraggoel.53784@gmail.com" style="color:#000000">sunnygkp10@gmail.com</a><br /><br />
-</div><div class="col-md-1"></div></div>
-<p>Or you can directly submit your feedback by filling the enteries below:-</p>
-<form role="form"  method="post" action="feed.php?q=feedback.php">
-<div class="row">
-<div class="col-md-3"><b>Name:</b><br /><br /><br /><b>Subject:</b></div>
-<div class="col-md-9">
-<!-- Text input-->
-<div class="form-group">
-  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text"><br />    
-   <input id="name" name="subject" placeholder="Enter subject" class="form-control input-md" type="text">    
-
-</div>
-</div>
-</div><!--End of row-->
-
-<div class="row">
-<div class="col-md-3"><b>E-Mail address:</b></div>
-<div class="col-md-9">
-<!-- Text input-->
-<div class="form-group">
-  <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">    
- </div>
-</div>
-</div><!--End of row-->
-
-<div class="form-group"> 
-<textarea rows="5" cols="8" name="feedback" class="form-control" placeholder="Write feedback here..."></textarea>
-</div>
-<div class="form-group" align="center">
-<input type="submit" name="submit" value="Submit" class="btn btn-primary" />
-</div>
-</form>';
+            <div class="row">
+            <hr>
+            <p class="L alert alert-success">
+            To send me your feedback through e-mail id: 
+            <a href="mailto:saurabh.paytmservices@gmail.com" style="color:#000000">Click Here</a>
+            </p>
+<p class="alert alert-info">To directly submit your feedback Please fill the form enteries below :-</p>
+<hr>
+<form role="form" method="post" action="feed.php?q=feedback.php">
+  <div class="row">
+    <div class="col-md-3"><b>Name :</b></div>
+    <div class="col-md-9">
+      <div class="form-group">
+        <input id="name" name="name" placeholder="Enter your name " class="form-control input-md" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"><b>Subject :</b></div>
+    <div class="col-md-9">
+      <div class="form-group">
+        <input id="subject" name="subject" placeholder="Enter subject" class="form-control input-md" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"><b>E-Mail address :</b></div>
+    <div class="col-md-9">
+      <div class="form-group">
+        <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <textarea rows="5" cols="8" name="feedback" class="form-control" placeholder="Write feedback here..."></textarea>
+  </div>
+  <div class="form-group" align="center">
+    <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+  </div>
+</form>
+';
           } ?>
                 </div>
                 <!--col-md-6 end-->
