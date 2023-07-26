@@ -17,87 +17,108 @@
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   <style>
-body {
-        position: relative;
-        /* Set the parent container to relative positioning */
-        min-height: 100vh !important;
-        /* Ensure the parent container takes up at least the full viewport height */
-        /* padding-bottom: 20px; */
-        /* Provide some space at the bottom for the footer */
-        color: black;
-        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-        /* text-align: center; */
-        /* img size is 50x50 */
-        background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 !important;
-        --webkit-animation: bg-scrolling-reverse 0.92s infinite;
-        /* Safari 4+ */
-        -moz-animation: bg-scrolling-reverse 0.92s infinite;
-        /* Fx 5+ */
-        -o-animation: bg-scrolling-reverse 0.92s infinite;
-        /* Opera 12+ */
-        animation: bg-scrolling-reverse 0.92s infinite;
-        /* IE 10+ */
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
-        -o-animation-timing-function: linear;
-        animation-timing-function: linear;
-        overflow-y: scroll !important;
+    body {
+      position: relative;
+      /* Set the parent container to relative positioning */
+      min-height: 100vh !important;
+      /* Ensure the parent container takes up at least the full viewport height */
+      /* padding-bottom: 20px; */
+      /* Provide some space at the bottom for the footer */
+      color: black;
+      font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+      /* text-align: center; */
+      /* img size is 50x50 */
+      background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 !important;
+      --webkit-animation: bg-scrolling-reverse 0.92s infinite;
+      /* Safari 4+ */
+      -moz-animation: bg-scrolling-reverse 0.92s infinite;
+      /* Fx 5+ */
+      -o-animation: bg-scrolling-reverse 0.92s infinite;
+      /* Opera 12+ */
+      animation: bg-scrolling-reverse 0.92s infinite;
+      /* IE 10+ */
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      -o-animation-timing-function: linear;
+      animation-timing-function: linear;
+      overflow-y: scroll !important;
     }
-    .footer{
+
+    .footer {
       z-index: 2 !important;
-      position: absolute !important;
+      position: absolute;
       bottom: 0 !important;
-      width: 100vw !important;
-      margin:0px !important;
+      width: 100vw;
+      margin: 0px !important;
     }
-    .SM{
-      font-size:1rem!important;
+
+    @media screen and (max-width:1000px) {
+      .header .row * {
+        text-align: center;
+      }
+
+      span.pull-right {
+        float: none !important;
+        padding: 1rem;
+      }
+
+      footer {
+        position: relative;
+      }
+
     }
-    .M{
-      font-size:1.5rem!important;
+
+    .SM {
+      font-size: 1rem !important;
     }
-    .L{
-      font-size:2rem!important;
+
+    .M {
+      font-size: 1.5rem !important;
     }
-    .XL{
-      font-size:2.5rem!important;
+
+    .L {
+      font-size: 2rem !important;
     }
-    .XXL{
-      font-size:3rem!important;
+
+    .XL {
+      font-size: 2.5rem !important;
     }
-    .input-group{
-      padding:5px;
+
+    .XXL {
+      font-size: 3rem !important;
+    }
+
+    .input-group {
+      padding: 5px;
       border-radius: 5px;
     }
-    .blur{
-      height:100%;
-      margin-top:2rem;
+
+    .blur {
+      height: 100%;
+      margin-top: 2rem;
       border-radius: 0.5rem;
       width: auto;
-border: 1px solid gainsboro;
-background: white;
-backdrop-filter: blur(2.5px);
+      border: 1px solid gainsboro;
+      background: white;
+      backdrop-filter: blur(2.5px);
     }
-    fieldset{
-      width: auto;
-border: 3px solid royalblue;
-background: #e0ec8a45;
-backdrop-filter: blur(2.5px);
-padding: 2rem;
-border-radius: 1rem;
-margin-right: -15px;
-margin-left: 15px;
-padding: 2rem;
-border-radius: 1rem;
-}
 
-    .panel{
-      margin:0;
-      padding:5rem;
+    fieldset {
+      width: auto;
+      border: 3px solid royalblue;
+      background: #e0ec8a45;
+      backdrop-filter: blur(2.5px);
+      padding: 2rem;
+      border-radius: 1rem;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    .panel {
+      margin: 0;
+      padding: 5rem;
       border-radius: 0rem;
     }
-
-    
   </style>
   <!--alert message-->
   <?php if (@$_GET['w']) {
@@ -215,7 +236,7 @@ if (!(isset($_SESSION['email']))) {
     echo '</table></div></div>';
 
 }?>
-<!-- <span id="countdown" class="timer"></span>
+          <!-- <span id="countdown" class="timer"></span>
 <script>
 var seconds = 40;
     function secondPassed() {
@@ -275,8 +296,8 @@ if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2) {
           </div>
         ';
     }
-    echo '<br/><hr /><br><br><br><br><br><button type="submit" style="margin: 0px 2rem 0px 2rem;" class="btn btn-primary L"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
-    echo '
+    echo '<hr /><button type="submit" style="margin: 0px 2rem 0px 2rem;" class="btn btn-primary L"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
+    echo '<br><br>
     </fieldset>';
     echo '</div>'; //closing row div for options
     //header("location:dash.php?q=4&step=2&eid=$id&n=$total");

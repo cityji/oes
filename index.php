@@ -30,12 +30,7 @@
     }
   </script>
   <style>
-    /*
-    * {
-    outline: 1px solid red;
-    }
-    */
-    /* help determine body level outlines */
+
     body {
         position: relative;
         /* Set the parent container to relative positioning */
@@ -103,7 +98,7 @@
     .part-2 {
       display: flex;
       flex-wrap: wrap;
-      overflow: hidden; 
+      overflow: hidden;
     }
 
     @media screen and (max-width:700px) {
